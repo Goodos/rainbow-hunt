@@ -5,12 +5,12 @@ Rainbow Hunt is a hyper-casual game in the style of Temple Run and Subway Surfer
 
 <br>
 
-## Installation / Loading
+## Installation
 The project was developed using the Unity game engine. The Unity version required for the project to work is 2020.3. You can install this version through the Unity Hub. After downloading the project files from GitHub, use the 'Add' option in the Unity Hub to add and open the project folder you downloaded.
 
 <br>
 
-## Introduction / Description
+## Introduction
 Welcome to the world of Rainbow Hunt! This is a dynamic, hyper-casual game that provides a unique twist on the endless running genre. Here, you control an ever-advancing balloon soaring through a vibrant path that unfolds with a riot of colors.
 
 The gameplay's beauty lies in its simplicity and color dynamics. Our balloon character doesn't just drift in the air; it feeds on colorful cubes scattered along the path, each ingestion altering its color. But here's the catch - the color of the balloon and the path must always match! If they do, the balloon begins to deflate to normal size. However, when the balloon color contrasts with the path, it begins to inflate until it cannot withstand the pressure and finally bursts! This brings a strategic aspect to the game, compelling the player to change colors meticulously, thus creating an exhilarating gaming experience.
