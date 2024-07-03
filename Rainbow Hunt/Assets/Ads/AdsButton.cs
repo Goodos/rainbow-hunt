@@ -5,6 +5,7 @@ using UnityEngine.UI;
 public class AdsButton : MonoBehaviour
 {
     [SerializeField] private Button _skipLvl;
+    [SerializeField] private BallScript ballScript;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class AdsButton : MonoBehaviour
     {
         AdsController.Instance.ShowInter(() =>
         {
+            ballScript.AdIncreaseScore();
             
         });
     }

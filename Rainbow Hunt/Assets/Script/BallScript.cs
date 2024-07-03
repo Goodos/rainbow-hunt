@@ -123,7 +123,7 @@ public class BallScript : MonoBehaviour
     
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
 
         
@@ -209,6 +209,13 @@ public class BallScript : MonoBehaviour
 
         
 
+    }
+
+    public void AdIncreaseScore()
+    {
+        highScoreValue += 100;
+        PlayerPrefs.SetInt("HighScore", highScoreValue);
+        highScore.text = highScoreValue.ToString();
     }
 
     public void ChangeSpeed(float speedChange)
