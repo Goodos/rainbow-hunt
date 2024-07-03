@@ -7,12 +7,16 @@ public class MenuScreen : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private GameObject playScreen;
+    [SerializeField] private GameObject menuScreen;
     [SerializeField] private GameObject ball;
     [SerializeField] private bool isItTest;
     [SerializeField] private AudioSource music;
 
+    private bool death;
+
     void Start()
     {
+        death = false;
         switch (PlayerPrefs.GetInt("MuteMusic"))
         {
             case 1:
@@ -25,12 +29,18 @@ public class MenuScreen : MonoBehaviour
         }
     }
 
+    public void Death()
+    {
+        death = true;
+    }
+
     // Update is called once per frame
     void Update()
     {
-
-        switch (isItTest)
+        if (!death)
         {
+            switch (isItTest)
+            {
             case true:
 
                 if (Input.GetMouseButton(0))
@@ -38,7 +48,7 @@ public class MenuScreen : MonoBehaviour
 
                     playScreen.SetActive(true);
                     ball.SetActive(true);
-                    gameObject.SetActive(false);
+                    menuScreen.SetActive(false);
                 }
                 break;
 
@@ -47,11 +57,13 @@ public class MenuScreen : MonoBehaviour
                 {
                     ball.SetActive(true);
                     playScreen.SetActive(true);
-                    gameObject.SetActive(false);
+                    menuScreen.SetActive(false);
                 }
                 break;
 
+            }
         }
+        
 
         
     }

@@ -17,25 +17,6 @@ public class PlayAgainScript : MonoBehaviour
 
     public void StartAgain()
     {
-        //startAgain.SetActive(false);
-
-
-
-        //splash.SetActive(false);
-
-        
-
-        
-        //ball.SetActive(true);
-        
-        //ball.transform.localScale = new Vector3(.7f, .7f, .7f);
-        //ball.transform.position = new Vector3(0, 0.315f, 5);
-
-        //menuCanvas.SetActive(true);
-
         SceneManager.LoadScene(0);
-
-
-
     }
 }

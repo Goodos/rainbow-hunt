@@ -3,22 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.Design.Serialization;
 using TMPro;
-using UnityEditor;
-using UnityEditor.UIElements;
 using UnityEngine;
 
 public class BallScript : MonoBehaviour
 {
-    // Topun forward yönünde ilerleme hýzý , levele göre hýzlandýrýlabilir.
+
+    [SerializeField] private MenuScreen menuScreen;
     [SerializeField] private float speed;
 
-    // Topun doðru platformda yol alýrken büyüme katsayýsý.
     [SerializeField] private float scaleBiggerMultiplier;
 
-    //Topun yanlýþ platformda yol alýrken küçülme katsayýsý.
     [SerializeField] private float scaleSmallerMultiplier;
 
-    //Topun sað ve sola hareketlerindeki hýzý
     [SerializeField] private float LeftRightSpeed;
 
     [SerializeField] private bool isItTest;
@@ -365,7 +361,7 @@ public class BallScript : MonoBehaviour
             {
                 PlayerPrefs.SetInt("HighScore", currentScore);
             }
-
+            menuScreen.Death();
             gameObject.SetActive(false);
         }
     }
